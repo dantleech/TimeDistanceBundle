@@ -1,0 +1,55 @@
+{
+    "hash": "65cd72d8c4ad310f35ee3708bff5609f",
+    "packages": [
+        {
+            "name": "frost/distance",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mfrost503/Distance.git",
+                "reference": "aa5104765848d9986dc9daad948b36e8deb90191"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mfrost503/Distance/zipball/aa5104765848d9986dc9daad948b36e8deb90191",
+                "reference": "aa5104765848d9986dc9daad948b36e8deb90191",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2012-10-31 01:18:26",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Frost": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Matt Frost",
+                    "email": "mfrost.design@gmail.com",
+                    "homepage": "http://shortwhitebaldguy.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A distance conversion library",
+            "homepage": "http://github.com/mfrost503/Distance",
+            "keywords": [
+                "distance",
+                "conversions",
+                "miles",
+                "kilometers"
+            ]
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "frost/distance": 20
+    }
+}
