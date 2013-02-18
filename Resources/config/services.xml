@@ -1,0 +1,20 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="dtl_distance_time.helper" class="DTL\Bundle\TimeDistanceBundle\Util\TimeDistanceHelper"/>
+
+        <service id="dtl_distance_time.twig_extension" class="DTL\Bundle\TimeDistanceBundle\Twig\TimeDistanceExtension">
+            <argument type="service" id="dtl_distance_time.helper"/>
+            <argument>%normalized_distance_unit%</argument>
+            <tag name="twig.extension" />
+        </service>
+
+    </services>
+
+</container>
+
+
+
