@@ -1,4 +1,15 @@
 {
+    "name": "dtl/time-distance-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides TWIG helpers for distance and time stuff",
+    "keywords": ["Distance", "Time"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Leech",
+            "homepage": "http://www.dantleech.com"
+        }
+    ],
     "require": {
         "frost/distance": "dev-master"
     }
