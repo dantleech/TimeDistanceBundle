@@ -11,9 +11,9 @@
         }
     ],
     "autoload": {
-        "psr-0": { "DTL\\Bundle\\DistanceTimeBundle": "" }
+        "psr-0": { "DTL\\Bundle\\TimeDistanceBundle": "" }
     },
-    "target-dir": "DTL/Bundle/DistanceTimeBundle",
+    "target-dir": "DTL/Bundle/TimeDistanceBundle",
     "require": {
         "frost/distance": "dev-master"
     }
