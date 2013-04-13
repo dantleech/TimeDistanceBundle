@@ -1,6 +1,6 @@
 <?php
 
-namespace DTL\Bundle\DistanceTimeBundle\DependencyInjection;
+namespace DTL\Bundle\TimeDistanceBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

@@ -1,6 +1,6 @@
 <?php
 
-namespace DTL\TimeDistanceBundle\Form\DataTransformer;
+namespace DTL\Bundle\TimeDistanceBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use DTL\TimeDistanceBundle\Util\FormatUtil;
@@ -22,15 +22,6 @@ class DistanceToMetersTransformer implements DataTransformerInterface
         }
     }
 
-    /**
-     * Transforms a string into a Boolean.
-     *
-     * @param  string $value  String value.
-     *
-     * @return Boolean        Boolean value.
-     *
-     * @throws UnexpectedTypeException if the given value is not a string
-     */
     public function reverseTransform($value)
     {
         if ($value) {

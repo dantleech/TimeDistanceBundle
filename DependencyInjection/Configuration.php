@@ -1,6 +1,6 @@
 <?php
 
-namespace DTL\Bundle\TimeDistanceTBundle\DependencyInjection;
+namespace DTL\Bundle\TimeDistanceBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

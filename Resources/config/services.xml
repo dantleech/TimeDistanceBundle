@@ -8,7 +8,7 @@
 
         <service id="dtl_time_distance.twig_extension" class="DTL\Bundle\TimeDistanceBundle\Twig\TimeDistanceExtension">
             <argument type="service" id="dtl_time_distance.helper"/>
-            <argument>%normalized_distance_unit%</argument>
+            <argument>%dtl_time_distance.normalized_distance_unit%</argument>
             <tag name="twig.extension" />
         </service>
 

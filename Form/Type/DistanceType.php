@@ -1,12 +1,13 @@
 <?php
-namespace DTL\TimeDistanceBundle\Form\Type;
+namespace DTL\Bundle\TimeDistanceBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\Extension\Core\DataTransformer\BooleanToStringTransformer;
 use Symfony\Component\Form\FormView;
-use DTL\TimeDistanceBundle\Form\DataTransformer\DistanceToMetersTransformer;
+use Symfony\Component\Form\FormBuilderInterface;
+use DTL\Bundle\TimeDistanceBundle\Form\DataTransformer\DistanceToMetersTransformer;
+use DTL\Bundle\TimeDistanceBundle\Util\TimeDistanceHelper;
 
 class DistanceType extends AbstractType
 {
@@ -20,10 +21,10 @@ class DistanceType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->appendClientTransformer(new DistanceToMetersTransformer($tdh))
+            ->addViewTransformer(new DistanceToMetersTransformer($this->tdh))
             ->setAttribute('value', $options['value'])
         ;
     }
@@ -31,7 +32,7 @@ class DistanceType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildView(FormView $view, FormInterface $form)
+    public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $view->set('value', $form->getClientData());
     }
@@ -49,9 +50,9 @@ class DistanceType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getParent(array $options)
+    public function getParent()
     {
-        return 'field';
+        return 'text';
     }
 
     /**

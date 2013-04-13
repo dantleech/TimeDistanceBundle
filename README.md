@@ -1,7 +1,19 @@
 Disatance and Time Bundle
 =========================
 
-This bundle adds some useful time and distance TWIG filters
+This bundle adds some useful time and distance integrations:
+
+ - Twig filters
+   - format_distance
+   - seconds_to_stopwatch
+   - average_pace
+   - average_speed
+ - Form types
+   - Distance form type
+   - Stopwatch form type
+
+Note that when we talk about "stopwatch" here it refers to the
+format of the text, ie. hh:mm:ss.
 
 Configuration
 -------------
@@ -12,8 +24,11 @@ this value in the configuration as follows:
     dtl_time_distance:
         normalized_distance_unit: m
 
+Twig Filters
+============
+
 format_distance
----------------
+~~~~~~~~~~~~~~~
 
 Convert the given normalized distance to the specified unit:
 
@@ -24,7 +39,7 @@ Convert the given normalized distance to the specified unit:
     {{ 2000|format_distance('ft', 4) }}
 
 seconds_to_stopwatch
---------------------
+-------------------
 
 Format a given number of seconds as "stopwatch" (hh:mm:ss):
 
@@ -55,3 +70,25 @@ Format average speed acccording to given distance unit:
 
     {# If you ran 10k in 47 minutes you run at 7.93 miles per hour #}
     {{ 2820|average_speed(10, 'miles') }}
+
+Form Types
+==========
+
+distance
+--------
+
+The distance form type accepts the following formats
+
+- 12k - 12 kilometers
+- 12km - 12 kilometers
+- 12 miles - 12 miles
+- 12m - 12 miles
+- 12 - 12 kilometers
+
+All values are converted to *kilometers* internally.
+
+stopwatch
+---------
+
+The stopwatch type accepts all values accepted by `mktime`
+with the addition of the stopwatch format `hh:mm:ss`.

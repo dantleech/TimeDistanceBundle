@@ -45,7 +45,7 @@ class TimeDistanceHelper
         return $this->normalizeDistanceUnit($unit);
     }
 
-    public function secondsAsStopwatch($seconds)
+    public function secondsToStopwatch($seconds)
     {
         $hours = floor($seconds / 60 / 60);
         $minutes = floor(($seconds - ($hours * 60 * 60)) / 60);

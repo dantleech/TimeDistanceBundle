@@ -1,32 +1,30 @@
 <?php
 
-namespace DTL\TrainerBundle\Form\DataTransformer;
+namespace DTL\Bundle\TimeDistanceBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
-use DTL\TrainerBundle\Util\FormatUtil;
+use DTL\Bundle\TimeDistanceBundle\Util\TimeDistanceHelper;
 
 class StopwatchToSecondTransformer implements DataTransformerInterface
 {
+    protected $tdh;
+
+    public function __construct(TimeDistanceHelper $tdh)
+    {
+        $this->tdh = $tdh;
+    }
+
     public function transform($value)
     {
         if ($value) {
-            return FormatUtil::secondsToStopwatch($value);
+            return $this->tdh->secondsToStopwatch($value);
         }
     }
 
-    /**
-     * Transforms a string into a Boolean.
-     *
-     * @param  string $value  String value.
-     *
-     * @return Boolean        Boolean value.
-     *
-     * @throws UnexpectedTypeException if the given value is not a string
-     */
     public function reverseTransform($value)
     {
         if ($value) {
-            return FormatUtil::stopwatchToSeconds($value);
+            return $this->tdh->stopwatchToSeconds($value);
         }
     }
 }
