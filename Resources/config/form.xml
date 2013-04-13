@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="dtl_time_distance.form.type.stopwatch" class="DTL\TimeDistanceBundle\Form\Type\StopwatchType">
+            <argument type="service" id="dtl_time_distance.helper"/>
+            <tag name="form.type" alias="stopwatch" />
+        </service>
+        <service id="dtl_time_distance.form.type.distance" class="DTL\TimeDistanceBundle\Form\Type\DistanceType">
+            <argument type="service" id="dtl_time_distance.helper"/>
+            <tag name="form.type" alias="distance" />
+        </service>
+    </services>
+</container>
+
+

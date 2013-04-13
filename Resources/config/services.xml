@@ -4,10 +4,10 @@
 
     <services>
 
-        <service id="dtl_distance_time.helper" class="DTL\Bundle\TimeDistanceBundle\Util\TimeDistanceHelper"/>
+        <service id="dtl_time_distance.helper" class="DTL\Bundle\TimeDistanceBundle\Util\TimeDistanceHelper"/>
 
-        <service id="dtl_distance_time.twig_extension" class="DTL\Bundle\TimeDistanceBundle\Twig\TimeDistanceExtension">
-            <argument type="service" id="dtl_distance_time.helper"/>
+        <service id="dtl_time_distance.twig_extension" class="DTL\Bundle\TimeDistanceBundle\Twig\TimeDistanceExtension">
+            <argument type="service" id="dtl_time_distance.helper"/>
             <argument>%normalized_distance_unit%</argument>
             <tag name="twig.extension" />
         </service>

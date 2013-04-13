@@ -10,6 +10,10 @@
             "homepage": "http://www.dantleech.com"
         }
     ],
+    "autoload": {
+        "psr-0": { "DTL\\Bundle\\DistanceTimeBundle": "" }
+    },
+    "target-dir": "DTL/Bundle/DistanceTimeBundle",
     "require": {
         "frost/distance": "dev-master"
     }
